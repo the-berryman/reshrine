@@ -1,0 +1,29 @@
+{
+    "tracks": [
+        {
+            "title": "last breath.mp3",
+            "artist": "unknown",
+            "file": "uploads/default_track1.mp3"
+        },
+        {
+            "title": "basement.wav",
+            "artist": "the_watcher",
+            "file": "uploads/default_track2.mp3"
+        },
+        {
+            "title": "static_whispers.mp3",
+            "artist": "midnight_caller",
+            "file": "uploads/default_track3.mp3"
+        },
+        {
+            "title": "dont_look_back.wav",
+            "artist": "shadow_666",
+            "file": "uploads/default_track4.mp3"
+        },
+        {
+            "title": "she_follows.mp3",
+            "artist": "paranoid_entity",
+            "file": "uploads/default_track5.mp3"
+        }
+    ]
+}

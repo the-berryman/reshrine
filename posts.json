@@ -1,0 +1,28 @@
+{
+    "posts": [
+        {
+            "id": "1",
+            "title": "the whispers in static",
+            "date": "03/10/2025",
+            "excerpt": "i've been collecting sounds from abandoned frequencies. sometimes, when you listen carefully between stations, you can hear voices...",
+            "content": "<p>i've been collecting sounds from abandoned frequencies. sometimes, when you listen carefully between stations, you can hear voices that shouldn't be there.</p><p>radio stations that went off the air decades ago. conversations from people who are no longer alive. warnings about events that never happened.</p><p>last night at 3:33 am, i discovered a frequency that shouldn't exist. it was broadcasting what sounded like a heartbeat, but with a rhythm that was... wrong. inhuman. too slow, then suddenly too fast.</p><p>i recorded it for 30 minutes before my equipment malfunctioned. when i played it back, i could hear my own voice in the recording, even though i hadn't spoken a word.</p><p>i've uploaded it to the shrine. listen if you dare, but don't use headphones.</p><p>some sounds aren't meant to be heard so close to your brain.</p>",
+            "tags": ["recordings", "radio", "frequencies", "haunted audio"]
+        },
+        {
+            "id": "2",
+            "title": "lost vhs memories",
+            "date": "03/07/2025",
+            "excerpt": "found a box of unmarked vhs tapes at a garage sale. the family said they didn't know where they came from. they were already in the house when they moved in...",
+            "content": "<p>found a box of unmarked vhs tapes at a garage sale. the family said they didn't know where they came from. they were already in the house when they moved in.</p><p>most were blank. a few had recordings of old tv shows. one had what looked like home videos of a family i didn't recognize.</p><p>the last tape was different. it showed a room i immediately recognized as the living room where i found the tapes. same wallpaper. same furniture arrangement.</p><p>but it was filmed before the current family moved in. maybe the previous owners?</p><p>it showed a birthday party. nothing unusual until minute 37, when the camera pans across the room and catches a mirror on the wall.</p><p>in the reflection, you can see the camera operator.</p><p>it's me.</p><p>i've never been in that house before today.</p><p>i extracted the audio from this section and uploaded it to the shrine. there's a voice whispering something just before the camera shows the mirror.</p><p>can anyone make out what it's saying?</p>",
+            "tags": ["vhs tapes", "found footage", "time loop"]
+        },
+        {
+            "id": "3",
+            "title": "the windows xp startup sound slowed down 4000%",
+            "date": "03/03/2025",
+            "excerpt": "there's a hidden message in the windows xp startup sound that only becomes audible when extremely slowed down...",
+            "content": "<p>there's a hidden message in the windows xp startup sound that only becomes audible when extremely slowed down.</p><p>most people know that brian eno composed the windows 95 startup sound, but few know about the windows xp sound's darker origins.</p><p>i ran the sound through spectral analysis first and noticed unusual patterns in frequencies that should be empty. when slowed down 4000%, the 4-second startup becomes a 4.5-hour ambient drone.</p><p>at the 2 hour 17 minute mark, something changes.</p><p>human voices emerge from the drone. multiple overlapping voices speaking what sounds like latin, but with unusual syntax errors suggesting an ai or non-native speaker attempted to create the phrases.</p><p>the phrases translate roughly to:</p><p class='quote'>\"the window opens both ways\"<br>\"we see you through the glass\"<br>\"every startup is a summoning\"</p><p>microsoft has never acknowledged these hidden sounds despite multiple inquiries from audio engineers and tech historians.</p><p>i've uploaded a 10-minute excerpt containing the clearest voice segment to the shrine.</p><p>listen at your own risk.</p>",
+            "tags": ["windows xp", "hidden messages", "technology", "ambient audio"]
+        }
+    ]
+}

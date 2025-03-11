@@ -21,9 +21,9 @@
             <h1 class="flicker"><span class="title-glitch">re:play</span></h1>
             <div class="visitor-counter">visitors: <?php include 'counter.php'; ?></div>
             <nav>
-                <a href="index.html">blog</a>
-                <a href="shrine.html">shrine</a>
-                <a href="about.html">about</a>
+                <a href="index.php">blog</a>
+                <a href="shrine.php">shrine</a>
+                <a href="about.php">about</a>
             </nav>
         </header>
         

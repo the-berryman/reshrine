@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>re:play - horror blog</title>
+    <title>re:shrine </title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,7 +18,7 @@
     
     <div class="container">
         <header>
-            <h1 class="flicker"><span class="title-glitch">re:play</span></h1>
+            <h1 class="flicker"><span class="title-glitch">re:shrine</span></h1>
             <div class="visitor-counter">visitors: <?php include 'counter.php'; ?></div>
             <nav>
                 <a href="index.php">blog</a>
@@ -32,7 +32,7 @@
         </div>
         
         <footer>
-            <p>re:play est. 2025 • the words remain even after you close this page</p>
+            <p>re:play est. 2025 • the words remain even after you close this</p>
             <p><small><a href="shrine.html">make an offering</a></small></p>
         </footer>
     </div>

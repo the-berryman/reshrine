@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>re:play - about</title>
+    <title>re:shrine - about</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,7 +18,7 @@
     
     <div class="container">
         <header>
-            <h1 class="flicker"><span class="title-glitch">re:play</span></h1>
+            <h1 class="flicker"><span class="title-glitch">re:shrine</span></h1>
             <div class="visitor-counter">visitors: <?php include 'counter.php'; ?></div>
             <nav>
                 <a href="index.php">blog</a>

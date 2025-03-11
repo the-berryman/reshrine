@@ -6,7 +6,7 @@ $sampleMessages = [
     [
         'date' => '03/09/2025',
         'username' => 'midnight_caller',
-        'message' => 'i recorded this at 3:33am. there was someone else in my house.'
+        'message' => 'i recorded this at 3:33am. there was someone else in my house. it was my mom.'
     ],
     [
         'date' => '03/08/2025',
@@ -16,12 +16,12 @@ $sampleMessages = [
     [
         'date' => '03/07/2025',
         'username' => 'shadow_666',
-        'message' => 'the song stops at 2:17. after that it\'s just breathing.'
+        'message' => 'the song stops at 2:17. after that it\'s just sneezing.'
     ],
     [
         'date' => '03/06/2025',
         'username' => 'paranoid_entity',
-        'message' => 'don\'t listen with headphones. she whispers directions to your house.'
+        'message' => 'don\'t listen with headphones. she whispers directions to sonic drive in.'
     ]
 ];
 

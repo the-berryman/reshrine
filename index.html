@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shit movie of the day.</title>
+    <style>
+        body {
+            background-color: black;
+            color: #ffa600;
+            font-family: "Courier New", Courier, monospace;
+            text-transform: lowercase;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .movie-container {
+            border: 2px solid #ffc400;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            max-width: 400px;
+        }
+        img {
+            max-width: 100%;
+            border: 1px solid #ffbb00;
+        }
+        button {
+            background: black;
+            color: #ffae00;
+            border: 1px solid #ffc400;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-family: "Courier New", Courier, monospace;
+            text-transform: lowercase;
+        }
+        button:hover {
+            background: #6200ff;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>shit movie of the day</h1>
+    <p>selecting the shittiest one i can think of...</p>
+
+    <div id="movie" class="movie-container" style="display: none;">
+        <img id="poster" src="" alt="movie poster">
+        <h2 id="title"></h2>
+        <p><strong>year:</strong> <span id="year"></span></p>
+        <p><strong>metascore:</strong> <span id="metascore"></span></p>
+        <p><strong>plot:</strong> <span id="plot"></span></p>
+        <button onclick="fetchMovie()">get another ass movie</button>
+    </div>
+
+    <script>
+        const API_KEY = "e01c3f5a"; // Replace with your OMDB API key
+
+        const BAD_MOVIES = [
+            "tt0289043", "tt0319061", "tt0237572", "tt0338466", "tt0120913", 
+            "tt0196229", "tt0245674", "tt0120630", "tt0165832", "tt0145681"
+        ];
+
+        function getRandomBadMovie() {
+            return BAD_MOVIES[Math.floor(Math.random() * BAD_MOVIES.length)];
+        }
+
+        async function fetchMovie() {
+            document.querySelector("p").innerText = "selecting the shittiest one i can think of...";
+            document.getElementById("movie").style.display = "none";
+
+            const imdbId = getRandomBadMovie();
+            const response = await fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=${API_KEY}`);
+            const data = await response.json();
+
+            if (data.Response === "True") {
+                document.getElementById("poster").src = data.Poster;
+                document.getElementById("title").innerText = data.Title;
+                document.getElementById("year").innerText = data.Year;
+                document.getElementById("metascore").innerText = data.Metascore;
+
+                // Ensure there is a valid plot before sending to the AI
+                const moviePlot = data.Plot && data.Plot.length > 10 ? data.Plot : "This movie is so bad, even the database refused to summarize it.";
+                const funnyPlot = await getFunnyPlot(moviePlot);
+                document.getElementById("plot").innerText = funnyPlot;
+
+                document.querySelector("p").innerText = "";
+                document.getElementById("movie").style.display = "block";
+            } else {
+                document.querySelector("p").innerText = "failed to fetch a movie. try again.";
+            }
+        }
+
+        
+
+        async function getFunnyPlot(originalPlot) {
+    const TOGETHER_API_KEY = "29075fa2e477e8e0f22b184ba15f12bfeebc415b9a11907131421800b9f75987"; 
+
+    try {
+        const response = await fetch("https://api.together.xyz/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${TOGETHER_API_KEY}`
+            },
+            body: JSON.stringify({
+                model: "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
+                messages: [
+                    { "role": "system", "content": "You are a sarcastic movie critic. Rewrite the movie plot in a clever, ridiculous, depreciative, and deadpan way." },
+                    { "role": "user", "content": `Original plot: ${originalPlot}. Make it sound hilariously dumb in 50 words or less insulting everything and everyone about it concisely.` }
+                ],
+                temperature: 0.9,
+                top_p: 0.7,
+                top_k: 50,
+                repetition_penalty: 1,
+                stop: ["<|eot_id|>", "<|eom_id|>"]
+            })
+        });
+
+        const data = await response.json();
+
+        if (!data.choices || data.choices.length === 0) {
+            console.error("Error: API did not return valid choices.", data);
+            return "Oops! The AI refused to roast this movie. Try again!";
+        }
+
+        return data.choices[0].message.content;
+
+    } catch (error) {
+        console.error("API Request Failed:", error);
+        return "Oops! The AI broke down from laughing too hard. Try again later!";
+    }
+}
+
+        fetchMovie();
+    </script>
+
+</body>
+</html>
